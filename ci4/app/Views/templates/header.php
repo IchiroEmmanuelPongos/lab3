@@ -5,15 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pongos Site</title>
 <style>
-#Nav{
-list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: #3c3c3c;
-  overflow: hidden;
-  position:fixed;
-  width: 100%;
-}
 
 #navbar{
   float: right;
@@ -30,6 +21,31 @@ li a{
 li :hover{
   background-color: green;
 }
+
+.container {
+}
+
+.t {
+  float: top;
+  width: 100%;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  color: white;
+  bottom: 250px;
+  right: 0;
+  position: absolute;
+  text-decoration: none;
+}
+
+#Nav{
+list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color:rgba(0, 51, 0, 1);
+  position: fixed;
+  width: 100%;
+}
 </style>
 
 
@@ -43,11 +59,12 @@ li :hover{
   <li id="navbar"><a href="form.php">Survey Form n/a</a></li>
 </ul>
 
+<div class="container">
 <?php
 $me = [
     'src'    => 'images/BG.jpg',
     'alt'    => 'N/a',
-    'class'  => 'center',
+    'class'  => '',
     'width'  => '100%',
     'height' => '850',
     'title'  => 'WindowsXP',
@@ -55,5 +72,14 @@ $me = [
 ];
 echo img($me);
 ?>
+<div class="t"><h1 id="time">PM:AM</h1></div>
+</div>
+<script>
+const ta = new Date();
+document.getElementById("time").innerHTML = ta;
+
+
+
+</script>
 </head>
 </html>
