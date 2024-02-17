@@ -6,25 +6,6 @@
 <title>Pongos Site</title>
 <style>
 
-#navbar{
-  float: right;
-}
-
-li a{
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li :hover{
-  background-color: green;
-}
-
-.container {
-}
-
 .t {
   float: top;
   width: 100%;
@@ -33,32 +14,95 @@ li :hover{
   font-size: 25px;
   color: white;
   bottom: 350px;
-  right: 0;
+
   position: absolute;
   text-decoration: none;
 }
 
-#Nav{
-list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color:rgba(0, 51, 0, 1);
-  position: fixed;
-  width: 100%;
+.navbar {
+  overflow: hidden;
+  background-color: #333;
 }
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: green;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  overflow: hidden;
+}
+
+
+
+
+
 </style>
 
-
-<ul id="Nav">
-</li>
-  <li id="navbar"><a class="active" href="#intro">About Me</a></li>
-  <li id="navbar"><a href="resource.php">Resources n/a</a></li>
-  <li id="navbar"><a href="Act1.php">Script1Act n/a</a></li>
-  <li id="navbar"><a href="Act2.php">Script2Act n/a</a></li>
-  <li id="navbar"><a href="Act3.php">Script3Act n/a</a></li>
-  <li id="navbar"><a href="form.php">Survey Form n/a</a></li>
-</ul>
-
+<div class="navbar">
+<div class="dropdown">
+    <button class="dropbtn">Projects 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+  <a href="#intro">About Me</a>
+  <a href="#news">Gallery</a>
+   
+</div>
 <div class="container">
 <?php
 $me = [
