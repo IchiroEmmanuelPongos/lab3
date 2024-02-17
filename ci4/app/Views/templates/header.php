@@ -75,8 +75,8 @@ echo img($me);
 <div class="t"><h1 id="time">PM:AM</h1></div>
 </div>
 <script>
-const ta = new Date();
-document.getElementById("time").innerHTML = ta;
+var time = new Date();
+document.getElementById('time').innerHTML = time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
 
 
 
