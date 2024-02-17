@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
 <style>
-#center{
-text-align:center;
-}
-.center {
-  display: block;
+.center{
+display: block;
   margin-left: auto;
   margin-right: auto;
+
 }
 
+#Ab{
+text-align:center;	
+font-size: 40px;	
+}
+#Na{
+text-align:center;
+font-size: 30px;	
+	
+}
 
 * {
   box-sizing: border-box;
@@ -21,7 +28,7 @@ body {
 .column {
 float: left;
 width: 50%;
-height: 500px;
+height: 700px;
 padding: 15px;
 align-content: center;
 background-color: #d1ff99;
@@ -30,7 +37,7 @@ background-color: #d1ff99;
 .column2 {
 float: left;
 width: 50%;
-height: 300px;
+height: 500px;
 padding: 15px;
 align-content: center;
 background-color: #6cb1c4;
@@ -60,17 +67,17 @@ text-align: left;
 </style>
 <body>
 <div class="row">
-	<div class="column" id="blend">
+	<div class="column">
 	
-<h1 id="center">About Me</h1>	
-<h2 id="center">Pongos, Ichiro Emmanuel</h3>
+<h1 id="Ab">About Me</p>	
+<h2 id="Na">Pongos, Ichiro Emmanuel</h3>
 <?php
 $me = [
     'src'    => 'images/Picture.jpg',
     'alt'    => 'N/a',
     'class'  => 'center',
     'width'  => '',
-    'height' => '50%',
+    'height' => '35%',
     'title'  => 'Myself',
     'rel'    => 'lightbox',
 ];
