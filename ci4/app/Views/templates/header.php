@@ -32,7 +32,7 @@ li :hover{
   font-family: "Times New Roman", Times, serif;
   font-size: 25px;
   color: white;
-  bottom: 250px;
+  bottom: 350px;
   right: 0;
   position: absolute;
   text-decoration: none;
