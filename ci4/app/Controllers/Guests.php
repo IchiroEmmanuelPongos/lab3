@@ -53,12 +53,15 @@ class Guests extends BaseController
     {
         helper('form');
 
-        $data = $this->request->getPost(['title', 'body']);
+        $data = $this->request->getPost(['name', 'email', 'website', 'comment', 'gender']);
 
         // Checks whether the submitted data passed the validation rules.
         if (! $this->validateData($data, [
-            'title' => 'required|max_length[255]|min_length[3]',
-            'body'  => 'required|max_length[5000]|min_length[10]',
+            'name' => 'required|max_length[255]|min_length[3]',
+            'email'  => 'required|max_length[255]|min_length[5]',
+            'website'  => 'required|max_length[500]|min_length[10]',
+            'comment'  => 'required|max_length[5500]|min_length[10]',
+            'gender'  => 'required|in_list[male,female,other]',
         ])) {
             // The validation fails, so returns the form.
             return $this->new();
@@ -70,13 +73,15 @@ class Guests extends BaseController
         $model = model(GuestModel::class);
 
         $model->save([
-            'title' => $post['title'],
-            'slug'  => url_title($post['title'], '-', true),
-            'body'  => $post['body'],
+            'name' => $post['name'],
+            'email'  => url_title($post['name'], '-', true),
+            'website'  => $post['website'],
+            'comment'  => $post['comment'],
+            'gender'  => $post['gender'],
         ]);
 
         return view('templates/guestheader', ['title' => 'Create a news item'])
-            . view('guests/create')
+            . view('guests/success')
             . view('templates/guestfooter');
     }
 
