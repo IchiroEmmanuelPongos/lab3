@@ -66,6 +66,40 @@ text-align: left;
 }
 </style>
 <body>
+<div class="container">
+<?php
+$me = [
+    'src'    => 'images/BG.jpg',
+    'alt'    => 'N/a',
+    'class'  => '',
+    'width'  => '100%',
+    'height' => '850',
+    'title'  => 'WindowsXP',
+    'rel'    => 'lightbox',
+];
+echo img($me);
+?>
+<div class="t"><h1 id="time">PM:AM</h1></div>
+</div>
+<script>
+var time = new Date();
+document.getElementById('time').innerHTML = time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="row">
 	<div class="column">
 	
